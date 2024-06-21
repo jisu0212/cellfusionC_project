@@ -8,16 +8,501 @@
     <title>셀퓨전씨</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <div class="icons">
+            <a href="#"><img src="./images/icon_search.svg" alt="검색하기"></a>
+            <a href="#"><img src="./images/icon_mypage.svg" alt="마이페이지"></a>
+            <a href="#"><img src="./images/icon_cart.svg" alt="장바구니"></a>
+            <a href="#"><img src="./images/icon_menu.svg" alt="메뉴"></a>
+        </div>
+        <div class="tabs">
+            <div class="tab_left">
+                <h1><a href="#"><img src="./images/logo.png" alt="셀퓨전씨"></a></h1>
+                <div class="event">
+                    <a href="#">최대73%할인</a>
+                    <a href="#">타임세일</a>
+                    <a href="#">첫구매100원</a>
+                </div>
+            </div>
+            <div class="tab_right">
+                <a href="#">베스트</a>
+                <a href="#">이벤트</a>
+                <a href="#">쿠폰</a>
+                <a href="#">멤버십</a>
+                <a href="#">신상품</a>
+                <a href="#">리뷰</a>
+                <a href="#"><em>병의원전용</em></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="part part1">
+            <div class="swiper" id="main_ad_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="top">
+                                <p>#오늘사면 #오늘출발!</p>
+                                <h2>오늘 출발 서비스 오픈!</h2>
+                            </div>
+                            <p>평일 밤 9시까지 결제하면<br>택배가 오늘 출발합니다!</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="top">
+                                <p>#오늘사면 #오늘출발!</p>
+                                <h2>오늘 출발 서비스 오픈!</h2>
+                            </div>
+                            <p>평일 밤 9시까지 결제하면<br>택배가 오늘 출발합니다!</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- 슬라이드의 부가속성(페이지번호, 이전 다음 버튼 등) 위치(swiper-wrapper 밖에 쓴다.) -->
+                <!-- 주의사항! 지정된 클래스명 반드시 지키기!! -->
+                <!-- position:absolute 기본설정 -->
+                <div class="swiper-pagination"><!-- 비워두기 --></div>
+            </div>
+            <script>
+                const main_ad_slide = new Swiper('#main_ad_slide',{
+                    autoplay:{delay:3000},
+                    loop:true,
+                    // swiper-pagination Js
+                    pagination:{
+                        el:'#main_ad_slide .swiper-pagination', //부모 필수
+                        type:'bullets',//필수작성
+                    },
+                })
+            </script>
+        </div>
+        <div class="part part2">
+            <div class="title">
+                <h2>셀퓨전씨 대표 상품</h2>
+                <p>햇빛 연구소 셀퓨전씨를 대표하는 상품들을 만나보세요</p>
+            </div>
+            <div class="big_menu">
+                <a href="#"><img src="./images/main_sunscreen.jpg" alt="썬스크린"><span>Sun Screen</span></a>
+                <a href="#"><img src="./images/main_cleansing.png" alt="클렌징"><span>Cleansing</span></a>
+                <a href="#"><img src="./images/main_cream.jpg" alt="크림 앤 토너"><span>Cream & Toner</span></a>
+                <a href="#"><img src="./images/main_mask.jpg" alt="마스크 앤 패드"><span>Mask & Pads</span></a>
+            </div>
+        </div>
+        <div class="part part3">
+            <div class="ranking">
+                <div class="title">
+                    <h2>랭킹 TOP 10</h2>
+                    <p>일주일 동안 가장 많이 구매했어요</p>
+                </div>
+                <div class="ranking_tab">
+                    <a href="#">전체</a>
+                    <a href="#">선크림/BB크림</a>
+                    <a href="#">클렌징</a>
+                    <a href="#">토너</a>
+                    <a href="#">크림</a>
+                    <a href="#">앰플/세럼</a>
+                    <a href="#">마스크팩/패드</a>
+                    <a href="#">+더보기</a>
+                </div>
+            </div>
+            <div class="swiper" id="pdt_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="pdt">
+                            <a href="#">
+                                <div class="img">
+                                    <img src="./images/ranking_001.jpg" alt="">
+                                    <span>1</span>
+                                </div>
+                                <div class="info">
+                                    <h2>[효능책입환불제 10매 체험품 증정] [단품] 포스트 알파 쿨링 패드 70매</h2>
+                                    <div class="price">
+                                        <p class="sale">33%</p>
+                                        <h2 class="total">15,500원</h2>
+                                        <p class="origin"><del>23,000원</del></p>
+                                    </div>
+                                    <div class="star">
+                                        <img src="./images/icon_star_gray.png" alt="">
+                                        <span>5.0 (195)</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other_pdt">
+                            <h3>성분까지 착한 셀퓨전씨 선크림으로 올 여름도 자외선 완벽 차단!</h3>
+                            <div class="pdt_list">
+                                <div class="pdt">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="./images/ranking_002.jpg" alt="">
+                                            <span>2</span>
+                                        </div>
+                                        <div class="info">
+                                            <h2>[더블] 카밍 다운 크림 50ml + 50ml</h2>
+                                            <div class="price">
+                                                <h2 class="sale">72%</h2>
+                                                <h2 class="total">19,800원</h2>
+                                                <h2 class="origin"><del>72,000원</del></h2>
+                                            </div>
+                                            <div class="star">
+                                                <img src="./images/icon_star_gray.png" alt="">
+                                                <span>4.9 (1,320)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="pdt">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="./images/ranking_003.jpg" alt="">
+                                            <span>3</span>
+                                        </div>
+                                        <div class="info">
+                                            <h2>[더블] 레이저 UV 선스크린 50ml + 50ml</h2>
+                                            <div class="price">
+                                                <h2 class="sale">63%</h2>
+                                                <h2 class="total">31,300원</h2>
+                                                <h2 class="origin"><del>34,000원</del></h2>
+                                            </div>
+                                            <div class="star">
+                                                <img src="./images/icon_star_gray.png" alt="">
+                                                <span>4.9 (1,320)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="pdt">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="./images/ranking_004.jpg" alt="">
+                                            <span>4</span>
+                                        </div>
+                                        <div class="info">
+                                            <h2>[더블] v퍼스트 쿨링 마스크 5매 + 5매</h2>
+                                            <div class="price">
+                                                <h2 class="sale">50%</h2>
+                                                <h2 class="total">15,500원</h2>
+                                                <h2 class="origin"><del>30,000원</del></h2>
+                                            </div>
+                                            <div class="star">
+                                                <img src="./images/icon_star_gray.png" alt="">
+                                                <span>4.9 (1,320)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="pdt">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="./images/ranking_005.jpg" alt="">
+                                            <span>5</span>
+                                        </div>
+                                        <div class="info">
+                                            <h2>[더블] 토닝 선스크린 50ml + 50ml</h2>
+                                            <div class="price">
+                                                <h2 class="sale">58%</h2>
+                                                <h2 class="total">32,700원</h2>
+                                                <h2 class="origin"><del>78,000원</del></h2>
+                                            </div>
+                                            <div class="star">
+                                                <img src="./images/icon_star_gray.png" alt="">
+                                                <span>4.9 (1,320)</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 슬라이드의 부가속성(페이지번호, 이전 다음 버튼 등) 위치(swiper-wrapper 밖에 쓴다.) -->
+                <!-- 주의사항! 지정된 클래스명 반드시 지키기!! -->
+                <!-- position:absolute 기본설정 -->
+                <div class="swiper-pagination"><!-- 비워두기 --></div>
+            </div>
+        </div>
+        <div class="part part4">
+            <div class="title">
+                <h2>햇빛연구소, 셀퓨전씨</h2>
+                <a href="#">+더보기</a>
+            </div>
+            <div class="swiper" id="sun_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="img"><img src="./images/sun_001.png" alt="[단품] 아쿠아티카 스틱 썬스크린 19g"></div>
+                                    <div class="info">
+                                        <h2>[단품] 아쿠아티카 스틱 썬스크린 19g</h2>
+                                        <div class="price">
+                                            <del>25,000</del>
+                                            <em>17,500원</em>
+                                        </div>
+                                        <div class="spf">
+                                            <span>SPF 50</span>
+                                            <img src="./images/spf50.png" alt="spf 50">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img"><img src="./images/sun_002.png" alt="[단품] 레이저 UV 썬스크린 200ml"></div>
+                                    <div class="info">
+                                        <h2>[단품] 레이저 UV 썬스크린 200ml</h2>
+                                        <div class="price">
+                                            <del>42,000</del>
+                                            <em>17,500원</em>
+                                        </div>
+                                        <div class="spf">
+                                            <span>SPF 70</span>
+                                            <img src="./images/spf70.png" alt="spf 70">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img"><img src="./images/sun_003.png" alt="[단품] 아쿠아티카 스틱 썬스크린 19g"></div>
+                                    <div class="info">
+                                        <h2>[단품] 블러링 톤업 선베이스 40ml</h2>
+                                        <div class="price">
+                                            <del>28,000</del>
+                                            <em>17,900원</em>
+                                        </div>
+                                        <div class="spf">
+                                            <span>SPF 50</span>
+                                            <img src="./images/spf50.png" alt="spf 50">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part part5">
+            <div class="swiper" id="ad_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="./images/ad_001.png" alt="첫 구매 특가, 처음이라면 누구나! 셀퓨전씨 인기제품을 특가에 만나보세요!">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part part6">
+            <div class="title">
+                <h2>첫 구매 특가</h2>
+                <p>첫 구매 시 BEST 상품이 100원, 9,900원! 역대급 혜택 절대 놓치지 마세요!</p>
+            </div>
+            <div class="swiper buy_first_slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/first_buy_001.jpg" alt="아쿠아 포린 크림 60ml"></div>
+                            <div class="info">
+                                <div class="main_info">
+                                    <p>[첫구매 9,900원]</p>
+                                    <h2>아쿠아 포린 크림 60ml</h2>
+                                </div>
+                                <div class="price">
+                                    <del>32,000</del>
+                                    <em>9,900원</em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/first_buy_002.jpg" alt="pH 컨디션 토너 200ml"></div>
+                            <div class="info">
+                                <div class="main_info">
+                                    <p>[첫구매 9,900원]</p>
+                                    <h2>pH 컨디션 토너 200ml</h2>
+                                </div>
+                                <div class="price">
+                                    <del>24,000</del>
+                                    <em>9,900원</em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/first_buy_003.jpg" alt="레이저 리쥬비네이션 앰플 30ml"></div>
+                            <div class="info">
+                                <div class="main_info">
+                                    <p>[첫구매 9,900원]</p>
+                                    <h2>레이저 리쥬비네이션 앰플 30ml</h2>
+                                </div>
+                                <div class="price">
+                                    <del>24,000</del>
+                                    <em>9,900원</em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/first_buy_004.jpg" alt="레이저 UV썬 20ml"></div>
+                            <div class="info">
+                                <div class="main_info">
+                                    <p>[첫구매 100원]</p>
+                                    <h2>레이저 UV썬 20ml</h2>
+                                </div>
+                                <div class="price">
+                                    <del>24,000</del>
+                                    <em>100원</em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part part7">
+            <div class="part7_title">
+                <div class="title">
+                    <h2>구매 리뷰</h2>
+                    <p>상품을 구매한 고객님들의 솔직한 리얼리뷰를 확인해보세요!</p>
+                </div>
+                <a href="#">+ 더보기</a>
+            </div>
+            <div class="swiper" id="review_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/review_001.jpg" alt=""></div>
+                            <div class="review">
+                                <div class="review_title">
+                                    <div class="left">
+                                        <span><em>[첫구매]</em></span>
+                                        <span> pH 컨디션 토너 200ml</span>
+                                    </div>
+                                    <div class="right">
+                                        <span>40대 여성</span>
+                                        <span>지성</span>
+                                        <span>사용기간 : 6개월</span>
+                                        <span>특이사항 : 아토피</span>
+                                    </div>
+                                </div>
+                                <div class="review_contents">
+                                    <div class="contents_title">
+                                        <p><img src="./images/five_star.png" alt=""></p>
+                                        <h3>“지성 피부도 거뜬하게 사용할 수 있는 인생 토너입니다!”</h3>
+                                    </div>
+                                    <p class="contents_text">
+                                        지성이라 원래 기초케어는 정말 간단하게 하는 편이라 로션 하나만 바르고 끝냈었는데 이 토너는 많이 발라도 끈적거리지 않고 가볍고 정말 좋아요. 40년 인생 드디어 정착할 인생토너를 찾은 것 같아요. 효과, 성분 모두 완벽하고 재구매 의사 100%입니다!
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"><!-- 비워두기 --></div>
+            </div>
+        </div>
+        <div class="part part8">
+            <div class="time">
+                <p>타임세일! 마감까지 남은시간</p>
+                <div class="timeout">
+                    <div class="time_num">
+                        <h2 class="hour">21</h2>
+                        <h2 calss="min">28</h2>
+                        <h2 class="sec">23</h2>
+                    </div>
+                    <div class="time_text">
+                        <span>시간</span>
+                        <span>분</span>
+                        <span>초</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper" id="sale_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="img"><img src="./images/timesale_img_001.jpg" alt=""></div>
+                            <div class="contents">
+                                <h2>[선착순] 비비 10ml 추가 증정!</h2>
+                                <div class="detail">
+                                    <h2>[단품] 워터핏 톤업 선베이스 40ml</h2>
+                                    <div class="price">
+                                        <span>36%</span>
+                                        <span>17,900원</span>
+                                        <del>28,000원</del>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"><!-- 비워두기 --></div>
+            </div>
+            <a href="#" class="more_link">+ 더 보러가기</a>
+        </div>
+        <div class="part part9">
+            <div class="title">
+                <h2>신상 업데이트</h2>
+                <a href="#">+ 더보기</a>
+            </div>
+            <div class="swiper" id="update_slide"> <!-- position:relative -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="contents">
+                                <div class="left">
+                                    <div class="big_title">
+                                        <h2>Glass Skin Tone Up Cream</h2>
+                                        <p>바를수록 투명하게 유리알 톤업 크림</p>
+                                    </div>
+                                    <div class="small_title">
+                                        <div class="small_text">
+                                            <h2>[단품] 클래스 스킨 톤업 크림 50ml</h2>
+                                            <p>#유리알톤업 #70%수분베이스</p>
+                                        </div>
+                                        <div class="price">
+                                            <span>17,900원</span>
+                                            <del>28,000원</del>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <img src="./images/cellfusionc_lightgray.png" alt="">
+                                </div>
+                            </div>
+                            <div class="img"><img src="./images/new_update_img_001.jpg" alt=""></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"><!-- 비워두기 --></div>
+            </div>
+        </div>
+    </main>
     <footer>
         <div class="bank">
-            <img src="./images/logo.png" alt="셀퓨전씨">
+            <p><img src="./images/logo.png" alt="셀퓨전씨"></p>
             <ul>
                 <li>
-                    Bank Info<img src="./images/icon_arrow_bottm.svg" alt="">
+                    Bank info
+                    <p><img src="./images/icon_arrow_bottm.svg" alt=""></p>
                     <ul>
                         <li>우리은행 1005-103-027607</li>
                         <li>하나은행 229-910013-26104</li>
@@ -26,7 +511,8 @@
                     </ul>
                 </li>
                 <li>
-                    Family Site<img src="./images/icon_arrow_bottm.svg" alt="">
+                    Family Site
+                    <p><img src="./images/icon_arrow_bottm.svg" alt=""></p>
                     <ul>
                         <li>CMS LAB</li>
                         <li>Suiskin</li>

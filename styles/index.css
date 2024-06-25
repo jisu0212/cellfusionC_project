@@ -1,3 +1,14 @@
+@font-face {
+    font-family: pretendard;
+    font-weight: 700;
+    src: url(../font/Pretendard-Bold.ttf);
+}
+@font-face {
+    font-family: pretendard;
+    font-weight: 500;
+    src: url(../font/Pretendard-Regular.ttf);
+}
+body {font-family: pretendard, sans-serif;}
 header {padding: 30px 260px; text-align: right; z-index: 999; position: absolute; width:100%;}
 header .icons {}
 header .icons a {margin-right: 20px;}
@@ -30,7 +41,7 @@ main .part > * .swiper-pagination-bullet-active {background: #CF0A2C;}
 main .part1 {padding:0; position:relative;}
 main .part1 #main_ad_slide {}
 main .part1 #main_ad_slide .swiper-wrapper {}
-main .part1 #main_ad_slide .swiper-wrapper .swiper-slide {background-color: lime;}
+main .part1 #main_ad_slide .swiper-wrapper .swiper-slide {}
 main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a {
     width:100%;
     display:flex; justify-content: center;
@@ -40,7 +51,7 @@ main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad {
     width:100%; height: 950px; position:relative;
 }
 main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad img {
-    width:100%; height:100%;
+    width:100%;
 }
 main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad_text {
     position:absolute; padding: 0 260px;
@@ -87,44 +98,45 @@ main .part3 .ranking .title p {}
 main .part3 .ranking .ranking_tab {}
 main .part3 .ranking .ranking_tab a {margin-right: 30px; color: #595959;}
 main .part3 .ranking .ranking_tab a:last-child {margin:0;}
-main .part3 #pdt_slide {}
-main .part3 #pdt_slide .swiper-wrapper {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide {
+main .part3 .ranking_pdt_wrap {}
+main .part3 .ranking_pdt_wrap .pdt_slide:nth-child(2) {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide {
     display: flex; align-items: flex-end;
 }
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt {width: 335px; margin-right: 20px;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img {position: relative;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img img {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info h2 {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .sale {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .total {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .origin {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star img {}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star span {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt {width: 335px; margin-right: 20px;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img {position: relative;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img img {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info h2 {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .sale {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .total {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .price .origin {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star img {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .info .star span {}
 /* part3 공통 */
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .pdt a .img {border-radius: 10px 10px 0 0; overflow: hidden;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img span,
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .pdt a .img span {position: absolute; top:0; left:0; background-color: #CF0A2C; color:#fff; width:30px; height:30px; border-radius: 10px 0 0 0; text-align: center; padding-top: 5px; z-index: 999;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info {padding:10px 20px; border-radius: 0 0 10px 10px;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info h2 {line-height: 1.5;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price {display: flex; align-items: center; margin:5px 0;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale {font-weight: 600; color:#CF0A2C;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale,
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price .total {font-size: 1.25rem;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price .total {margin: 0 10px; font-weight: 700;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide > * .info .price .origin {color:#9f9f9f;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .pdt a .img {border-radius: 10px 10px 0 0; overflow: hidden;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a .img span,
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .pdt a .img span {position: absolute; top:0; left:0; background-color: #CF0A2C; color:#fff; width:30px; height:30px; border-radius: 10px 0 0 0; text-align: center; padding-top: 5px; z-index: 999;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info {padding:10px 20px; border-radius: 0 0 10px 10px;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info h2 {line-height: 1.5;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price {display: flex; align-items: center; margin:5px 0;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale {font-weight: 600; color:#CF0A2C;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale,
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .total {font-size: 1.25rem;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .total {margin: 0 10px; font-weight: 700;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .origin {color:#9f9f9f;}
 /* part3 공통 끝 */
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide .other_pdt {display:flex; flex-flow: column nowrap;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide .other_pdt h3 {
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt {display:flex; flex-flow: column nowrap;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt h3 {
     font-size: 1.875rem; font-weight: 600; line-height: 1.5; color:#d9d9d9; margin:0 auto 20px;
 }
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list {display:flex; justify-content: space-between;}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt {position:relative; width:calc((100% / 4) - 5px);}
-main .part3 #pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt a  {}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list {display:flex; justify-content: space-between;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt {position:relative; width:calc((100% / 4) - 5px);}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt a  {}
 /* ======================part4 */
 main .part4 {background-image: url(../images/part4_bg.jpg); height:682px;}
 main .part4 .title {text-align: center;}
@@ -146,6 +158,8 @@ main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .info .price em {fo
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .info .spf {display: flex; align-items: center; justify-content: center;}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .info .spf span {margin-right:5px;}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .info .spf img {}
+main .part4 #sun_slide .swiper-button-prev::after,
+main .part4 #sun_slide .swiper-button-next::after {color:#DEDEDE;}
 /* ======================part5 */
 main .part5 {padding:0;}
 main .part5 #ad_slide {position:relative;}
@@ -208,14 +222,15 @@ main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_conten
 /* ======================part8 */
 main .part8 {background-color: #F6F6F6; text-align: center;}
 main .part8 .time {margin-bottom: 40px;}
-main .part8 .time p {font-size: 1.25rem; font-weight: 700; color:#CF0A2C; margin-bottom: 10px;}
+main .part8 .time > p {font-size: 1.25rem; font-weight: 700; color:#CF0A2C; margin-bottom: 10px;}
 main .part8 .time .timeout {}
-main .part8 .time .timeout .time_num {display:flex; justify-content: center; font-size: 3.125rem; font-weight: 700;}
+main .part8 .time .timeout .time_num {display:flex; align-items:center; justify-content: center; font-size: 3.125rem; font-weight: 700; margin-bottom: 10px;}
 main .part8 .time .timeout .time_num .hour {}
+main .part8 .time .timeout .time_num > p {font-size: 3.125rem; margin:0 10px;}
 main .part8 .time .timeout .time_num .min {}
 main .part8 .time .timeout .time_num .sec {}
 main .part8 .time .timeout .time_text {}
-main .part8 .time .timeout .time_text span {}
+main .part8 .time .timeout .time_text span:nth-child(2) {margin:0 60px;}
 main .part8 #sale_slide {}
 main .part8 #sale_slide .swiper-wrapper {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide {border-radius: 10px; overflow: hidden;}
@@ -223,14 +238,14 @@ main .part8 #sale_slide .swiper-wrapper .swiper-slide a {display: flex;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:100%; background-color: #fff; display: flex; flex-flow: column nowrap; justify-content: center;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents > h2 {margin-bottom: 25px; font-size: 1.875rem; font-weight: 700;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents > h2 {margin-bottom: 25px; font-size: 1.563rem; font-weight: 700;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail h2 {
-    font-size: 1.563rem; margin-bottom: 10px;
+    font-size: 1.25rem; margin-bottom: 10px;
 }
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price span {
-    font-size: 1.875rem; font-weight: 700; color:#CF0A2C;
+    font-size: 1.563rem; font-weight: 700; color:#CF0A2C;
 }
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price span:nth-child(2) {color:#000; margin: 0 26px;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price del {
@@ -238,15 +253,15 @@ main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price
 }
 main .part8 .more_link {font-size: 1.25rem; font-weight: 600; width:254px; line-height: 67px; border: 1px solid #7E7E7E; margin-top: 40px; display: inline-block; border-radius: 10px;}
 /* ======================part9 */
-main .part9 {background-image: url(../images/part9_bg.jpg); background-size: cover;}
+main .part9 {}
 main .part9 .title {display:flex; justify-content: space-between; align-items: flex-end;}
 main .part9 .title h2 {}
 main .part9 .title a {}
 main .part9 #update_slide {}
 main .part9 #update_slide .swiper-wrapper {}
-main .part9 #update_slide .swiper-wrapper .swiper-slide {}
+main .part9 #update_slide .swiper-wrapper .swiper-slide {border:1px solid #DDDDDD; border-radius: 10px;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a {display:flex; justify-content: space-between; border-radius: 10px; overflow: hidden;}
-main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {display:flex; background-color: #fff; padding: 20px 60px; justify-content: space-between; width:calc(100% - 613px); align-items: center; border-right: 1px solid #ddd;}
+main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {display:flex; background-color: #f6f6f6; padding: 20px 60px; justify-content: space-between; width:calc(100% - 613px); align-items: center;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left {}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .big_title {margin-bottom: 50px;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .big_title h2 {font-size: 1.875rem; font-weight: 600; margin-bottom: 10px;}
@@ -264,14 +279,15 @@ main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:613px;back
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .img img {width:100%;}
 /* ======================part10 */
 main .part10 {}
-main .part10 .title {display:flex; justify-content: space-between; align-items: center;}
+main .part10 .title {display:flex; justify-content: space-between; align-items: center; position:relative;}
 main .part10 .title h2 {}
 main .part10 .title .page_btn {}
-main .part10 .title .page_btn a:first-child {margin-right: 20px;}
-main .part10 .title .page_btn a img {}
-main .part10 #line_up_slide {}
+main .part10 .title .page_btn .swiper-button-next::after,
+main .part10 .title .page_btn .swiper-button-prev::after {color:#bababa; font-size: 1.75rem;}
+main .part10 .title .page_btn .swiper-button-prev {margin-left: 1270px;}
+main .part10 #line_up_slide {position:relative;}
 main .part10 #line_up_slide .swiper-wrapper {}
-main .part10 #line_up_slide .swiper-wrapper .swiper-slide {}
+main .part10 #line_up_slide .swiper-wrapper .swiper-slide {margin-top: 20px;}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .function {border-radius: 10px; overflow: hidden;}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .function img {width:100%;}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list {display:flex; justify-content: space-between; margin-top: 20px;}
@@ -291,19 +307,26 @@ main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt a .info
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt a .info .star {}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt a .info .star img {}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt a .info .star span {}
+main .part10 #line_up_slide .swiper-scrollbar {position:absolute; top:0; left:0; height:5px;}
+main .part10 #line_up_slide .swiper-scrollbar-drag {background: #bababa;}
+main .part10 #line_up_slide .swiper-button-prev::after,
+main .part10 #line_up_slide .swiper-button-next::after {
+    color:#bababa;
+}
 /* ======================footer */
-footer {background-color: #F1F1F1; padding: 80px 260px; font-size: 0.875rem;}
-footer .bank {display: flex; justify-content: space-between; margin-bottom: 28px; align-items: center;}
-footer .bank > p {}
-footer .bank > p img {}
-footer .bank ul {display:flex;}
-footer .bank ul li {display: flex; border: 1px solid #929292; padding: 10px 20px; border-radius: 10px;}
-footer .bank ul li:first-child {margin-right: 20px;}
-footer .bank ul li p {margin-left: 10px;}
-footer .bank ul li p img {}
-footer .bank ul li ul {display: none;}
-footer .bank ul li ul li {}
-footer .info {display: flex; justify-content: space-between;}
+footer {background-color: #F1F1F1; padding: 80px 260px; font-size: 0.875rem; height:420px;}
+footer .bank {display: flex; justify-content: space-between; align-items: flex-start;}
+footer .bank p {}
+footer .bank p img {}
+footer .bank > ul {display: flex;}
+footer .bank > ul > li {border:1px solid #929292; border-radius: 10px; padding:10px 20px; width:216px; position:relative;}
+footer .bank > ul > li:first-child {margin-right: 20px;}
+footer .bank > ul > li > span {margin-bottom: 5px; display:flex; justify-content: space-between;}
+footer .bank > ul > li > span span {font-weight: 600;}
+footer .bank > ul > li > span img {}
+footer .bank > ul > li ul {display:none; height:100px; position:absolute; left:0; top: 50px; background-color: #F1F1F1; width:216px; padding:10px; border:1px solid #929292; border-radius: 10px;}
+footer .bank > ul > li ul li {margin-bottom: 5px;}
+footer .info {display: flex; justify-content: space-between; margin-top: 28px;}
 footer .info .detail_info {display: flex; flex-flow: column nowrap;}
 footer .info .detail_info span {margin-bottom: 10px;}
 footer .info .detail_info span:last-child,

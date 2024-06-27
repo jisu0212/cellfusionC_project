@@ -246,7 +246,7 @@ main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a .info .price em {
 }
 /* ======================part7 */
 main .part7 {}
-main .part7 .part7_title {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px;}
+main .part7 .part7_title {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-flow: row wrap;}
 main .part7 .part7_title .title {margin:0;}
 main .part7 .part7_title .title h2 {}
 main .part7 .part7_title .title p {}
@@ -267,9 +267,6 @@ main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title 
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right span::after {content: ''; background-color: #ddd; width:1px; height:15px; display: inline-block; margin: 0 10px;}
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right span:last-child::after {display: none;}
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents {display:flex; justify-content: space-between; align-items: center;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents::after {
-    content: ''; width:1px; height:91px; display:inline-block; background-color: #ddd; transform: translateX(-420px);
-}
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title {text-align: center; width:500px;}
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title p {margin-bottom: 10px;}
 main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title p img {}
@@ -290,10 +287,10 @@ main .part8 .time .timeout .time_text span:nth-child(2) {margin:0 60px;}
 main .part8 #sale_slide {}
 main .part8 #sale_slide .swiper-wrapper {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide {border-radius: 10px; overflow: hidden;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a {display: flex;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {overflow:hidden;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:calc(100% / 2); background-color: #fff; display: flex; flex-flow: column nowrap; justify-content: center;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a {display: flex; background-color: #fff;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {overflow:hidden; width:calc(100% / 2);}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {width:100%;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:calc(100% / 2); display: flex; flex-flow: column nowrap; justify-content: center;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents > h2 {margin-bottom: 25px; font-size: 1.563rem; font-weight: 700;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail h2 {
@@ -309,14 +306,14 @@ main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail .price
 }
 /* ======================part9 */
 main .part9 {}
-main .part9 .title {display:flex; justify-content: space-between; align-items: flex-end;}
+main .part9 .title {display:flex; justify-content: space-between; align-items: flex-end; flex-flow:row wrap;}
 main .part9 .title h2 {}
 main .part9 .title a {}
 main .part9 #update_slide {}
 main .part9 #update_slide .swiper-wrapper {}
 main .part9 #update_slide .swiper-wrapper .swiper-slide {border:1px solid #DDDDDD; border-radius: 10px;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a {display:flex; justify-content: space-between; border-radius: 10px; overflow: hidden;}
-main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {display:flex; background-color: #f6f6f6; padding: 20px 90px; justify-content: space-between; width:calc(100% - 613px); align-items: center;}
+main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {display:flex; background-color: #f6f6f6; padding: 20px 90px; justify-content: space-between; width:calc(100% / 2); align-items: center;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left {}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .big_title {margin-bottom: 50px;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .big_title h2 {font-size: 1.875rem; font-weight: 600; margin-bottom: 10px;}
@@ -329,17 +326,22 @@ main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .small
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .small_title .price span {font-size: 1.875rem; font-weight: 700; color:#CF0A2C; line-height: 1.5;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .left .small_title .price del {font-size: 1.25rem; color:#9F9F9F; margin-left: 26px;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right {}
-main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right img {}
-main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:613px;background-color: #fff;}
+main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right img {width:100%;}
+main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:calc(100% / 2); background-color: #fff;}
 main .part9 #update_slide .swiper-wrapper .swiper-slide a .img img {width:100%;}
 /* ======================part10 */
 main .part10 {}
 main .part10 .title {display:flex; justify-content: space-between; align-items: center; position:relative;}
 main .part10 .title h2 {}
-main .part10 .title .page_btn {}
-main .part10 .title .page_btn .swiper-button-next::after,
-main .part10 .title .page_btn .swiper-button-prev::after {color:#bababa; font-size: 1.75rem;}
-main .part10 .title .page_btn .swiper-button-prev {margin-left: 1270px;}
+main .part10 .title .page_btn {position:relative; width: 100px;}
+main .part10 .title .page_btn .swiper-button-prev,
+main .part10 .title .page_btn .swiper-button-next {
+    position:absolute; top:0;
+}
+main .part10 .title .page_btn .swiper-button-prev::after,
+main .part10 .title .page_btn .swiper-button-next::after
+{color:#bababa; font-size: 1.75rem;}
+main .part10 .title .page_btn .swiper-button-prev {}
 main .part10 #line_up_slide {position:relative;}
 main .part10 #line_up_slide .swiper-wrapper {}
 main .part10 #line_up_slide .swiper-wrapper .swiper-slide {margin-top: 20px;}
@@ -369,7 +371,7 @@ main .part10 #line_up_slide .swiper-button-next::after {
     color:#bababa;
 }
 /* ======================footer */
-footer {background-color: #F1F1F1; padding: 80px 260px; font-size: 0.875rem; height:420px;}
+footer {background-color: #F1F1F1; padding: 80px 260px; font-size: 0.875rem;}
 footer .bank {display: flex; justify-content: space-between; align-items: center;}
 footer .bank p {}
 footer .bank p img {}
@@ -379,7 +381,7 @@ footer .bank > ul > li:first-child {margin-right: 20px;}
 footer .bank > ul > li > span {display:flex; justify-content: space-between;}
 footer .bank > ul > li > span span {font-weight: 600;}
 footer .bank > ul > li > span img {}
-footer .bank > ul > li ul {display:none; position:absolute; left:0; top: 38px; background-color: #ffffff; width:216px; padding:20px; border-radius: 10px;}
+footer .bank > ul > li ul {display:none; position:absolute; left:0; top: 38px; background-color: #ffffff; width:216px; padding:20px; border-radius: 10px; z-index: 999;}
 footer .bank > ul > li ul li {margin-bottom: 15px;}
 footer .bank > ul > li ul li a:hover {font-weight: 600;}
 footer .bank > ul > li ul li:last-child {margin:0;}

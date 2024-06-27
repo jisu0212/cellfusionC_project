@@ -1,9 +1,16 @@
+@media screen and (max-width:1900px) {
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title,
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:last-child,
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(4),
+    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:last-child {display: none;}
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_text {width:100%; margin:0 0 20px;}
+}
 @media screen and (max-width:1580px) {
-    header .tabs .tab_left .event,
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents::after {display:none;}
+    header .tabs .tab_left .event {display:none;}
     header .icons {padding:30px 30px 10px;}
     header .tabs {padding:0 30px;}
-    header .menu {padding: 0 30px 77px;}
+    header .menu,
+    header .searching {padding: 0 30px 77px;}
     main .part {padding:80px 30px;}
     main .part1,
     main .part5 {padding:0;}
@@ -12,11 +19,7 @@
     main .part3 .ranking {flex-flow:column nowrap; align-items: flex-start;}
     main .part3 .ranking .ranking_tab {margin-top:40px;}
     main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt h3,
-    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(4),
-    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:last-child,
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title,
-    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right,
-    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:last-child {
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right {
         display:none;
     }
     main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li {width:286px;}
@@ -24,8 +27,7 @@
     main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a {width:320px;}
     main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title {flex-flow: column nowrap; margin-top: 20px;}
     main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right {margin-top: 10px;}
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_text {width:100%; margin:0 0 20px;}
-    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {position:relative; right: 50px;}
+
     main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {padding:0 30px;}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {width: calc(100% - 476px);}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:476px;}
@@ -44,4 +46,46 @@
     }
     main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:nth-child(3),
     main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:nth-child(3) {display: none;}
+}
+@media screen and (max-width:980px) {
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a {
+        flex-flow: row wrap; height:470px; justify-content: center;
+    }
+}
+@media screen and (max-width:915px){
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(2),
+    header .tabs .tab_right a em,
+    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li:last-child {
+        display:none;
+    }
+    header .tabs {flex-flow:column nowrap; padding: 0 16px;}
+    header .tabs .tab_right a:last-child {margin:0;}
+    header .icons {padding:30px 16px 10px;}
+    header .menu {padding: 0 16px 77px;}
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a {flex-flow:column nowrap; align-items: center;}
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents,
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right {width:100%;}
+}
+@media screen and (max-width:683px){
+    main .part2 .big_menu a:nth-child(1) span,
+    main .part2 .big_menu a span {font-size: 1.25rem;}
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(1),
+    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li:nth-child(2),
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:nth-child(2),
+    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:nth-child(2) {
+        display:none;
+    }
+    main .part7 .part7_title .title {margin-bottom: 20px;}
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a {
+        height:auto;
+    }
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a {
+        flex-flow:column nowrap;
+    }
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img,
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:100%; padding:20px 0 70px;}
+    footer .bank,
+    footer .info {flex-flow:row wrap;}
+    footer .bank > ul,
+    footer .info .sns {margin-top: 20px; flex-flow:row wrap;}
 }

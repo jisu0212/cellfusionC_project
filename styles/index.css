@@ -9,14 +9,14 @@
     src: url(../font/Pretendard-Regular.ttf);
 }
 body {font-family: pretendard, sans-serif;}
-header {text-align: right; z-index: 999; position: absolute; width:100%;}
-header .icons {padding: 30px 260px 10px;}
+header {text-align: right; position: absolute; width:100%;}
+header .icons {padding: 30px 260px 10px; position:relative; z-index: 999;}
 header .icons a {margin-right: 20px;}
 header .icons a:last-child,
 header .tabs .tab_left .event a:last-child,
 header .tabs .tab_right a:last-child {margin: 0;}
 header .icons a img {}
-header .tabs {padding: 0 260px; display: flex; align-items: center; justify-content: space-between;}
+header .tabs {padding: 0 260px; display: flex; align-items: center; justify-content: space-between; position:relative; z-index: 999;}
 header .tabs > * a {font-size: 1.125rem; font-weight: 600;}
 header .tabs .tab_left {display: flex; align-items: center;}
 header .tabs .tab_left h1 {margin-right: 50px;}
@@ -25,18 +25,55 @@ header .tabs .tab_left h1 a img {}
 header .tabs .tab_left .event {}
 header .tabs .tab_left .event a,
 header .tabs .tab_right a {margin-right: 20px;}
+header .tabs .tab_left .event a:hover,
+header .tabs .tab_right a:hover {color:#CF0A2C;}
 header .tabs .tab_right {}
 header .tabs .tab_right a {}
 header .tabs .tab_right a em {color:#CF0A2C; font-size: 1rem;}
-header .menu {background-color: #fff; padding: 0 260px;}
-header .menu .menu_cont {display:flex;}
-header .menu .menu_cont .menu_ad {width:425px; height:342px; background-color: gray;}
-header .menu .menu_cont .menu_ad img {width:100%;}
-header .menu .menu_cont .menu_text {display: flex;}
-header .menu .menu_cont .menu_text li {display:flex; flex-flow:column nowrap;}
-header .menu .menu_cont .menu_text li .menu_title {}
+header .menu {background-color: #fff; padding: 0 260px 77px; height:606px; position: absolute; top:0; width:100%; z-index: 10; display:none;}
+header .menu.on {display:block;}
+header .menu .menu_cont {position:relative; top:187px; display: flex; flex-flow:row nowrap; justify-content: space-between;}
+header .menu .menu_cont .menu-slide {border-radius: 10px; overflow:hidden; height:342px; width:425px; position:absolute; top:0;}
+header .menu .menu_cont .menu-slide .swiper-wrapper {}
+header .menu .menu_cont .menu-slide .swiper-wrapper .swiper-slide {}
+header .menu .menu_cont .menu-slide .swiper-wrapper .swiper-slide a {}
+header .menu .menu_cont .menu-slide .swiper-wrapper .swiper-slide a img {}
+header .menu .menu_cont .menu_text {display: flex; text-align: left; position:absolute; right:0;}
+header .menu .menu_cont .menu_text li {display:flex; flex-flow:column nowrap; margin-right: 140px; position:relative;}
+header .menu .menu_cont .menu_text li::after {
+    content: ''; display: block; width:1px; height:342px; background-color: #ddd; position:absolute; right:-70px; 
+}
+header .menu .menu_cont .menu_text li:last-child {margin:0;}
+header .menu .menu_cont .menu_text li:last-child::after {display:none;}
+header .menu .menu_cont .menu_text li .menu_title {margin-bottom: 30px; font-weight: 500; font-size: 1.125rem;}
 header .menu .menu_cont .menu_text li .menu_list {display:flex; flex-flow:column nowrap;}
-header .menu .menu_cont .menu_text li .menu_list a {}
+header .menu .menu_cont .menu_text li .menu_list a {margin-bottom: 25px;}
+header .menu .menu_cont .menu_text li .menu_list a:hover {font-weight: 600;}
+header .menu .menu_cont .menu_text li .menu_list a:last-child {margin:0;}
+header .searching {background-color: #fff; padding: 0 260px 77px; height:606px; position: absolute; top:0; width:100%; z-index: 10; display:none;}
+header .searching.on {display: block;}
+header .searching .searching_detail {
+    position:relative; top:181px; width:100%;
+}
+header .searching .searching_detail .search_bar {
+    width:100%; line-height: 50px; border-radius: 25px; border:1px solid #ddd; background-color: #fff; display:flex; overflow:hidden; align-items: center;
+}
+header .searching .searching_detail .search_bar input {width:100%; line-height: 50px; border: 0; padding: 0 50px; font-size: 1.25rem; font-family: pretendard;}
+header .searching .searching_detail .search_bar input:focus {outline:none;}
+header .searching .searching_detail .search_bar a {margin-right: 50px;}
+header .searching .searching_detail .search_bar a img {}
+header .searching .searching_detail .search_content {display: flex; justify-content: space-between; height:254px; margin-top: 50px;}
+header .searching .searching_detail .search_content .content_left {
+    display:flex; text-align: left; justify-content: space-between;
+}
+header .searching .searching_detail .search_content .content_left .search_ranking1 {width:max-content;}
+header .searching .searching_detail .search_content .content_left .search_ranking1:first-child {margin-right: 100px;}
+header .searching .searching_detail .search_content .content_left .search_ranking1 h3 {margin-bottom: 30px; font-size: 1.125rem; font-weight: 500;}
+header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide {}
+header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper {height:200px;}
+header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide {display:flex; flex-flow: column nowrap; justify-content: space-between;}
+header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide a {color:#646464;}
+header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide a:hover {font-weight: 500; color:#000;}
 /* 공통 */
 main {}
 main .part {padding:80px 260px;}
@@ -59,7 +96,7 @@ main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a {
     flex-flow: column nowrap;
 }
 main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad {
-    width:100%; height: 950px; position:relative;
+    width:1920px; height: 950px; position:relative;
 }
 main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad img {
     width:100%;
@@ -84,15 +121,19 @@ main .part2 .title p {}
 main .part2 .big_menu {
     display:grid;
     grid-template-areas: 
-    'sunscreen cleansing cleansing'
-    'sunscreen cream mask';
+    'sunscreen sunscreen cleansing cleansing'
+    'sunscreen sunscreen cream mask';
     border-radius: 10px; overflow: hidden;
 }
 main .part2 .big_menu a {position:relative; display:flex; justify-content: center; overflow: hidden;}
-main .part2 .big_menu a:nth-child(1) {grid-area: sunscreen; width:700px; height:670px;}
+main .part2 .big_menu a:nth-child(1) {grid-area: sunscreen;}
+main .part2 .big_menu a:nth-child(2) {grid-area: cleansing; }
+main .part2 .big_menu a:nth-child(3) {grid-area: cream;}
+main .part2 .big_menu a:nth-child(4) {grid-area: mask;}
+/* main .part2 .big_menu a:nth-child(1) {grid-area: sunscreen; width:700px; height:670px;}
 main .part2 .big_menu a:nth-child(2) {grid-area: cleansing; width:700px; height:335px;}
 main .part2 .big_menu a:nth-child(3) {grid-area: cream; width:350px; height:335px;}
-main .part2 .big_menu a:nth-child(4) {grid-area: mask; width:350px; height:335px;}
+main .part2 .big_menu a:nth-child(4) {grid-area: mask; width:350px; height:335px;} */
 main .part2 .big_menu a img {width:100%; transition: 0.3s;}
 main .part2 .big_menu a img:hover {transform: scale(1.1);}
 main .part2 .big_menu a:nth-child(1) span {font-size: 2.5rem;}
@@ -150,7 +191,7 @@ main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pd
     font-size: 1.875rem; font-weight: 600; line-height: 1.5; color:#d9d9d9; margin:0 auto 20px;
 }
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list {display:flex; justify-content: space-between;}
-main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt {position:relative; width:calc((100% / 4) - 5px);}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt {position:relative; width:251px;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt a {}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt a .info {height: 129px; display: flex; flex-flow: column nowrap; justify-content: space-between;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt a .info > h2:first-child {height:48px;}
@@ -162,7 +203,7 @@ main .part4 .title a {}
 main .part4 #sun_slide {}
 main .part4 #sun_slide .swiper-wrapper {}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide {}
-main .part4 #sun_slide .swiper-wrapper .swiper-slide ul {display:flex; justify-content: space-between;width:calc(100% - 242px); margin: 0 auto;}
+main .part4 #sun_slide .swiper-wrapper .swiper-slide ul {display:flex; justify-content: space-around; width:100%;}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li {}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a {}
 main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .img {margin-bottom: 10px;}
@@ -250,9 +291,9 @@ main .part8 #sale_slide {}
 main .part8 #sale_slide .swiper-wrapper {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide {border-radius: 10px; overflow: hidden;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a {display: flex;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {overflow:hidden;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:100%; background-color: #fff; display: flex; flex-flow: column nowrap; justify-content: center;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:calc(100% / 2); background-color: #fff; display: flex; flex-flow: column nowrap; justify-content: center;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents > h2 {margin-bottom: 25px; font-size: 1.563rem; font-weight: 700;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents .detail h2 {

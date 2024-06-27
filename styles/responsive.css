@@ -1,0 +1,47 @@
+@media screen and (max-width:1580px) {
+    header .tabs .tab_left .event,
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents::after {display:none;}
+    header .icons {padding:30px 30px 10px;}
+    header .tabs {padding:0 30px;}
+    header .menu {padding: 0 30px 77px;}
+    main .part {padding:80px 30px;}
+    main .part1,
+    main .part5 {padding:0;}
+    main .part1 #main_ad_slide .swiper-wrapper .swiper-slide a .ad_text {padding:0 30px;}
+    main .part2 .big_menu a:nth-child(1) span {font-size: 1.875rem;}
+    main .part3 .ranking {flex-flow:column nowrap; align-items: flex-start;}
+    main .part3 .ranking .ranking_tab {margin-top:40px;}
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt h3,
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(4),
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:last-child,
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title,
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right,
+    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:last-child {
+        display:none;
+    }
+    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li {width:286px;}
+    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .img img {position: relative; right:30px;}
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a {width:320px;}
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title {flex-flow: column nowrap; margin-top: 20px;}
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right {margin-top: 10px;}
+    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_text {width:100%; margin:0 0 20px;}
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {position:relative; right: 50px;}
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {padding:0 30px;}
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {width: calc(100% - 476px);}
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:476px;}
+    footer {padding: 80px 30px;}
+}
+@media screen and (max-width:1190px) {
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(3) {display:none;}
+}
+@media screen and (max-width:1024px) {
+    main .part2 .big_menu {
+        display:grid;
+        grid-template-areas: 
+        'sunscreen cleansing'
+        'cream mask';
+        border-radius: 10px; overflow: hidden;
+    }
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:nth-child(3),
+    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:nth-child(3) {display: none;}
+}

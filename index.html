@@ -8,13 +8,8 @@
     <title>셀퓨전씨</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <script src="./script/index.js" defer></script>
-    <!--플러그인 필수 css cdn 연결-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!--플러그인 필수 JS cdn 연결-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <script src="./script/script.js" defer></script>
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -22,14 +17,15 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
         <div class="icons">
-            <a href="#"><img src="./images/icon_search.svg" alt="검색하기"></a>
+            <a href="#" class="icon_search"><img src="./images/icon_search.svg" alt="검색하기"></a>
             <a href="#"><img src="./images/icon_mypage.svg" alt="마이페이지"></a>
             <a href="#"><img src="./images/icon_cart.svg" alt="장바구니"></a>
-            <a href="#"><img src="./images/icon_menu.svg" alt="메뉴"></a>
+            <a href="#" class="icon_menu"><img src="./images/icon_menu.svg" alt="메뉴"></a>
         </div>
         <div class="tabs">
             <div class="tab_left">
@@ -52,7 +48,19 @@
         </div>
         <div class="menu">
             <div class="menu_cont">
-                <a href="#" class="menu_ad"><img src="#" alt=""></a>
+                <div class="swiper menu-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/menu_ad_001.jpg" alt="AD클리어 썬스크린"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/menu_ad_002.jpg" alt="카밍다운크림"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/menu_ad_003.jpg" alt="UV썬스크린"></a>
+                        </div>
+                    </div>
+                </div>
                 <ul class="menu_text">
                     <li>
                         <h2 class="menu_title">유형별</h2>
@@ -100,6 +108,70 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div class="searching">
+            <div class="searching_detail">
+                <div class="search_bar">
+                    <input type="text" placeholder="원하시는 제품 이름을 검색해보세요">
+                    <a href="#"><img src="./images/icon_search.svg" alt="검색하기"></a>
+                </div>
+                <div class="search_content">
+                    <div class="content_left">
+                        <div class="search_ranking1">
+                            <h3>인기검색어</h3>
+                            <div class="swiper search_ranking1_slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">1. 선크림</a>
+                                        <a href="#">2. UV 썬스크린</a>
+                                        <a href="#">3. 카밍 다운 크림</a>
+                                        <a href="#">4. 톤업 선베이스</a>
+                                        <a href="#">5. 수분크림</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">6. 클렌징 폼</a>
+                                        <a href="#">7. 마스크팩</a>
+                                        <a href="#">8. 아쿠아티카</a>
+                                        <a href="#">9. 블러링 톤업</a>
+                                        <a href="#">10. 레이저 UV 썬스크린</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_ranking1">
+                            <h3>실시간검색어</h3>
+                            <div class="swiper search_ranking1_slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">1. 레이저 UV 썬스크린</a>
+                                        <a href="#">2. 포스트 알파 쿨링 패드</a>
+                                        <a href="#">3. 카밍 다운 크림</a>
+                                        <a href="#">4. 퍼스트 쿨링 마스크</a>
+                                        <a href="#">5. 잡티 세럼</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">6. 톤업 크림</a>
+                                        <a href="#">7. 브라이트닝 팩</a>
+                                        <a href="#">8. 선 베이스</a>
+                                        <a href="#">9. 선 스틱</a>
+                                        <a href="#">10. 마스크팩</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper search-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/search_ad_001.jpg" alt=""></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/search_ad_002.jpg" alt="카밍다운크림"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -2707,6 +2779,18 @@
                     hide: false,
                 },
             })
+            const menu_slide = new Swiper('.menu-slide',{
+            autoplay:{delay:3000},
+            effect:'fade',
+            })
+            const search_slide = new Swiper('.search-slide',{
+            autoplay:{delay:3000},
+            effect:'fade',
+            })
+            var search_ranking1_slide = new Swiper(".search_ranking1_slide", {
+                autoplay:{delay:3000},
+                direction: "vertical",
+            });
             </script>
     </main>
     <footer>

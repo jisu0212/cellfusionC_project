@@ -5,10 +5,25 @@
 }
 @font-face {
     font-family: pretendard;
+    font-weight: 600;
+    src: url(../font/Pretendard-SemiBold.ttf);
+}
+@font-face {
+    font-family: pretendard;
     font-weight: 500;
+    src: url(../font/Pretendard-Medium.ttf);
+}
+@font-face {
+    font-family: pretendard;
+    font-weight: 400;
     src: url(../font/Pretendard-Regular.ttf);
 }
-body {font-family: pretendard, sans-serif;}
+@font-face {
+    font-family: pretendard;
+    font-weight: 300;
+    src: url(../font/Pretendard-Light.ttf);
+}
+body {font-family: 'pretendard', sans-serif;}
 header {text-align: right; position: absolute; width:100%;}
 header .icons {padding: 30px 260px 10px; position:relative; z-index: 999;}
 header .icons a {margin-right: 20px;}
@@ -16,8 +31,8 @@ header .icons a:last-child,
 header .tabs .tab_left .event a:last-child,
 header .tabs .tab_right a:last-child {margin: 0;}
 header .icons a img {}
-header .tabs {padding: 0 260px; display: flex; align-items: center; justify-content: space-between; position:relative; z-index: 999;}
-header .tabs > * a {font-size: 1.125rem; font-weight: 600;}
+header .tabs {padding: 0 260px; display: flex; align-items: center; justify-content: space-between; position:relative; z-index: 900;}
+header .tabs > * a {font-size: 1.063rem; font-weight: 600;}
 header .tabs .tab_left {display: flex; align-items: center;}
 header .tabs .tab_left h1 {margin-right: 50px;}
 header .tabs .tab_left h1 a {}
@@ -29,8 +44,8 @@ header .tabs .tab_left .event a:hover,
 header .tabs .tab_right a:hover {color:#CF0A2C;}
 header .tabs .tab_right {}
 header .tabs .tab_right a {}
-header .tabs .tab_right a em {color:#CF0A2C; font-size: 1rem;}
-header .menu {background-color: #fff; padding: 0 260px 77px; height:606px; position: absolute; top:0; width:100%; z-index: 10; display:none;}
+header .tabs .tab_right a em {color:#CF0A2C; font-size: 0.938rem;}
+header .menu {background-color: #fff; padding: 0 260px 77px; height:606px; position: absolute; top:0; width:100%; z-index: 10; display:none; margin:0 auto;}
 header .menu.on {display:block;}
 header .menu .menu_cont {position:relative; top:187px; display: flex; flex-flow:row nowrap; justify-content: space-between;}
 header .menu .menu_cont .menu-slide {border-radius: 10px; overflow:hidden; height:342px; width:425px; position:absolute; top:0;}
@@ -47,7 +62,7 @@ header .menu .menu_cont .menu_text li:last-child {margin:0;}
 header .menu .menu_cont .menu_text li:last-child::after {display:none;}
 header .menu .menu_cont .menu_text li .menu_title {margin-bottom: 30px; font-weight: 500; font-size: 1.125rem;}
 header .menu .menu_cont .menu_text li .menu_list {display:flex; flex-flow:column nowrap;}
-header .menu .menu_cont .menu_text li .menu_list a {margin-bottom: 25px;}
+header .menu .menu_cont .menu_text li .menu_list a {margin-bottom: 25px; width:max-content;}
 header .menu .menu_cont .menu_text li .menu_list a:hover {font-weight: 600;}
 header .menu .menu_cont .menu_text li .menu_list a:last-child {margin:0;}
 header .searching {background-color: #fff; padding: 0 260px 77px; height:606px; position: absolute; top:0; width:100%; z-index: 10; display:none;}
@@ -74,12 +89,13 @@ header .searching .searching_detail .search_content .content_left .search_rankin
 header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide {display:flex; flex-flow: column nowrap; justify-content: space-between;}
 header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide a {color:#646464;}
 header .searching .searching_detail .search_content .content_left .search_ranking1 .search_ranking1_slide .swiper-wrapper .swiper-slide a:hover {font-weight: 500; color:#000;}
+header .searching .searching_detail .search_content > .search_slide >.swiper-wrapper > .swiper-slide a img {}
 /* 공통 */
 main {}
 main .part {padding:80px 260px;}
 main .part .title {margin-bottom: 40px;}
 main .part .title h2 {font-size: 1.875rem; margin-bottom: 10px; font-weight: 600;}
-main .part .title p {font-size: 1.25rem; color:#595959;}
+main .part .title p {font-size: 1.25rem; color:#595959; line-height: 1.5;}
 main .part > * .swiper-pagination {position:relative; margin-top: 40px;}
 main .part > * .swiper-pagination-bullet { opacity:1; background-color: #d9d9d9;}
 main .part > * .swiper-pagination-bullet-active {background: #CF0A2C;}
@@ -130,10 +146,6 @@ main .part2 .big_menu a:nth-child(1) {grid-area: sunscreen;}
 main .part2 .big_menu a:nth-child(2) {grid-area: cleansing; }
 main .part2 .big_menu a:nth-child(3) {grid-area: cream;}
 main .part2 .big_menu a:nth-child(4) {grid-area: mask;}
-/* main .part2 .big_menu a:nth-child(1) {grid-area: sunscreen; width:700px; height:670px;}
-main .part2 .big_menu a:nth-child(2) {grid-area: cleansing; width:700px; height:335px;}
-main .part2 .big_menu a:nth-child(3) {grid-area: cream; width:350px; height:335px;}
-main .part2 .big_menu a:nth-child(4) {grid-area: mask; width:350px; height:335px;} */
 main .part2 .big_menu a img {width:100%; transition: 0.3s;}
 main .part2 .big_menu a img:hover {transform: scale(1.1);}
 main .part2 .big_menu a:nth-child(1) span {font-size: 2.5rem;}
@@ -148,7 +160,7 @@ main .part3 .ranking .title {margin:0;}
 main .part3 .ranking .title h2 {}
 main .part3 .ranking .title p {}
 main .part3 .ranking .ranking_tab {}
-main .part3 .ranking .ranking_tab a {margin-right: 30px; color: #595959;}
+main .part3 .ranking .ranking_tab a {line-height: 1.5; margin-right: 30px; color: #595959;}
 main .part3 .ranking .ranking_tab a:first-child {color:#CF0A2C; font-weight: 600;}
 main .part3 .ranking .ranking_tab a:hover {font-weight: 600;}
 main .part3 .ranking .ranking_tab a:last-child:hover {font-weight: 400;}
@@ -179,7 +191,7 @@ main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > .pdt a 
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .pdt a .img span {position: absolute; top:0; left:0; background-color: #CF0A2C; color:#fff; width:30px; height:30px; border-radius: 10px 0 0 0; text-align: center; padding-top: 5px; z-index: 999;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info {padding:10px 20px; border-radius: 0 0 10px 10px;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info h2 {line-height: 1.5;}
-main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price {display: flex; align-items: center; margin:5px 0;}
+main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price {display: flex; align-items: center; margin:5px 0; letter-spacing: -0.5px;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale {font-weight: 600; color:#CF0A2C;}
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .sale,
 main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide > * .info .price .total {font-size: 1.25rem;}
@@ -251,27 +263,23 @@ main .part7 .part7_title .title {margin:0;}
 main .part7 .part7_title .title h2 {}
 main .part7 .part7_title .title p {}
 main .part7 .part7_title a {}
-main .part7 #review_slide {}
-main .part7 #review_slide .swiper-wrapper {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a {display:flex; border: 1px solid #ddd; border-radius: 10px; height:221px;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .img {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .img img {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review {padding: 20px 40px; width:100%; display:flex; flex-flow: column nowrap; justify-content: center;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title {display:flex; justify-content: space-between; margin-bottom: 30px; font-size: 1.125rem; color:#595959;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .left {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .left span {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .left span em {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right span {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right span::after {content: ''; background-color: #ddd; width:1px; height:15px; display: inline-block; margin: 0 10px;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right span:last-child::after {display: none;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents {display:flex; justify-content: space-between; align-items: center;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title {text-align: center; width:500px;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title p {margin-bottom: 10px;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title p img {}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title h3 {font-size: 1.25rem; font-weight: 700;}
-main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_text {width:calc(100% - 553px); line-height: 1.7; margin-left: 93px;}
+main .part7 .review_slide {}
+main .part7 .review_slide .swiper-wrapper {}
+main .part7 .review_slide .swiper-wrapper .swiper-slide {border:1px solid #f1f1f1; border-radius: 10px; overflow: hidden;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a {text-align: center;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_img {height:221px;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_img img {width:100%;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents {padding:0 40px;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .summary {border-bottom: 1px solid #ddd;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .summary p {margin: 30px 0 10px;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .summary p img {}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .summary h3 {font-size: 1.125rem; line-height: 1.5; font-weight: 600; margin-bottom: 10px;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .review_text {}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .review_text .review_info {margin:20px 0 10px; font-size: 0.938rem; font-weight: 600; color:#868686; display:flex; justify-content: space-between;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .review_text .review_info span {line-height: 1.5;}
+main .part7 .review_slide .swiper-wrapper .swiper-slide a .review_contents .review_text p {line-height: 1.7; margin-bottom: 20px;}
+main .part7 .review_slide .swiper-scrollbar {position:relative; margin-top: 40px; height:5px;}
+main .part7 .review_slide .swiper-scrollbar-drag {background: #bababa;}
 /* ======================part8 */
 main .part8 {background-color: #F6F6F6; text-align: center; margin:80px 0;}
 main .part8 .time {margin-bottom: 40px;}
@@ -288,7 +296,10 @@ main .part8 #sale_slide {}
 main .part8 #sale_slide .swiper-wrapper {}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide {border-radius: 10px; overflow: hidden;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a {display: flex; background-color: #fff;}
-main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {overflow:hidden; width:calc(100% / 2);}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img {overflow:hidden; width:calc(100% / 2); position:relative;}
+main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img::after {
+    content: ''; display: block; width:1px; height:250px; background-color: #ddd; position:absolute; top:80px; right:0;
+}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img img {width:100%;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:calc(100% / 2); display: flex; flex-flow: column nowrap; justify-content: center;}
 main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents > h2 {margin-bottom: 25px; font-size: 1.563rem; font-weight: 700;}

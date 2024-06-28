@@ -1,9 +1,9 @@
 @media screen and (max-width:1900px) {
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_title,
+    main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img::after,
+    header .menu .menu_cont .menu-slide,
     main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:last-child,
     main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(4),
     main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:last-child {display: none;}
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_contents .contents_text {width:100%; margin:0 0 20px;}
 }
 @media screen and (max-width:1580px) {
     header .tabs .tab_left .event {display:none;}
@@ -25,13 +25,13 @@
     main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li {width:286px;}
     main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li a .img img {position: relative; right:30px;}
     main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a {width:320px;}
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title {flex-flow: column nowrap; margin-top: 20px;}
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a .review .review_title .right {margin-top: 10px;}
-
     main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {padding:0 30px;}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {width: calc(100% - 476px);}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .img {width:476px;}
     footer {padding: 80px 30px;}
+}
+@media screen and (max-width:1305px) {
+    header .searching .searching_detail .search_content > .search-slide {display:none;}
 }
 @media screen and (max-width:1190px) {
     main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(3) {display:none;}
@@ -44,29 +44,36 @@
         'cream mask';
         border-radius: 10px; overflow: hidden;
     }
+    main .part2 .big_menu a:nth-child(2) {background-image: url(../images/main_cleansing2.png); background-size: 100%; background-position: center; transition:0.3s;}
+    main .part2 .big_menu a:nth-child(2):hover {background-size: 105%;}
+    main .part2 .big_menu a:nth-child(2) img {display:none;}
     main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:nth-child(3),
     main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:nth-child(3) {display: none;}
 }
-@media screen and (max-width:980px) {
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a {
-        flex-flow: row wrap; height:470px; justify-content: center;
-    }
-}
 @media screen and (max-width:915px){
+    header .menu {height: 1000px; right:0; z-index: 990;}
+    header .menu .menu_cont .menu_text {flex-flow:row wrap; margin: -70px auto; width:100%;}
+    header .menu .menu_cont .menu_text li {margin: 0 0 50px; width:50%; padding: 0 20px;}
+    header .menu .menu_cont .menu_text li::after,
     main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(2),
     header .tabs .tab_right a em,
-    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li:last-child {
+    main .part4 #sun_slide .swiper-wrapper .swiper-slide ul li:last-child,
+    main .part5 #ad_slide .swiper-pagination {
         display:none;
     }
     header .tabs {flex-flow:column nowrap; padding: 0 16px;}
     header .tabs .tab_right a:last-child {margin:0;}
     header .icons {padding:30px 16px 10px;}
     header .menu {padding: 0 16px 77px;}
+    main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents {padding: 40px 90px;}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a {flex-flow:column nowrap; align-items: center;}
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents,
     main .part9 #update_slide .swiper-wrapper .swiper-slide a .contents .right {width:100%;}
 }
 @media screen and (max-width:683px){
+    header .searching {height:1000px;}
+    header .searching .searching_detail .search_content .content_left {flex-flow: row wrap;}
+    header .searching .searching_detail .search_content .content_left .search_ranking1:nth-child(1) {margin-bottom: 50px;}
     main .part2 .big_menu a:nth-child(1) span,
     main .part2 .big_menu a span {font-size: 1.25rem;}
     main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .other_pdt .pdt_list .pdt:nth-child(1),
@@ -75,17 +82,18 @@
     main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:nth-child(2) {
         display:none;
     }
-    main .part7 .part7_title .title {margin-bottom: 20px;}
-    main .part7 #review_slide .swiper-wrapper .swiper-slide a {
-        height:auto;
-    }
+    main .part3 .ranking_pdt_wrap .pdt_slide .swiper-wrapper .swiper-slide .pdt,
+    main .part6 #buy_first_slide .swiper-wrapper .swiper-slide a:first-child,
+    main .part10 #line_up_slide .swiper-wrapper .swiper-slide .pdt_list .pdt:first-child {margin:0 auto;}
     main .part8 #sale_slide .swiper-wrapper .swiper-slide a {
         flex-flow:column nowrap;
     }
     main .part8 #sale_slide .swiper-wrapper .swiper-slide a .img,
     main .part8 #sale_slide .swiper-wrapper .swiper-slide a .contents {width:100%; padding:20px 0 70px;}
+    main .part10 .title {flex-flow: column nowrap; align-items: flex-start;}
+    main .part10 .title .page_btn {margin-top: 20px;}
     footer .bank,
     footer .info {flex-flow:row wrap;}
-    footer .bank > ul,
+    footer .bank > ul {margin-top: 20px;}
     footer .info .sns {margin-top: 20px; flex-flow:row wrap;}
 }

@@ -4,8 +4,8 @@
 * 개인작업 100%
 ### 사용프로그램
 Photoshop, Figma, HTML, CSS, JAVASCRIPT
-Netlify
-<a target="_blank" href="https://cellfusionc-project.netlify.app/">
+### Netlify
+<a target="_blank" href="https://cellfusionc-project.netlify.app/">웹 바로가기</a>
 ### Figma 와이어프레임 & 프로토타입
 <a target="_blank" href="https://www.figma.com/design/VUiIl2og5EUV618Sp9PDhK/%EC%85%80%ED%93%A8%EC%A0%84%EC%94%A8?node-id=0-1&t=E39LSv8SQ6mZW65k-1">피그마 주소 바로가기</a>
 ### 작업이력
